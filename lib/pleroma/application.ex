@@ -91,6 +91,7 @@ defmodule Pleroma.Application do
     # Define workers and child supervisors to be supervised
     children =
       [
+        Pleroma.Web.Telemetry,
         Pleroma.Repo,
         Config.TransferTask,
         Pleroma.Emoji,
